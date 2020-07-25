@@ -21,11 +21,10 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install packages
-pacman -S sudo nano git xorg sddm plasma-desktop kde-applications pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-lirc pulseaudio-zeroconf pulseaudio-ctl networkmanager nautilus firefox terminator code gimp shotcut blender lutris
+pacman -S sudo nano git xorg sddm plasma-desktop kde-applications networkmanager nautilus firefox terminator
 
 # Enable services
 systemctl enable NetworkManager.service
-systemctl enable bluetooth.service
 systemctl enable sddm.service
 
 # User configuration
