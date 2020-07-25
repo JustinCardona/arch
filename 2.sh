@@ -5,18 +5,19 @@ read -p "Enter your zone: " zone
 read -p "Enter your cpu brand (intel or amd): " cpu
 # Host configuration
 ln -sf /usr/share/zoneinfo/"$region"/"$zone" /etc/localtime
-hwclock --systohc
+hwclock --systohc --utc
 echo "LANG=en_US.UTF-8" > /etc/locale.gen
 locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "en_US.UTF-8" > /etc/locale.conf
 echo "$host" > /etc/hostname
 echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t$host.localdomain	$host"> /etc/hosts
 passwd
 
-# CPU and GPU drivers
-pacman -S "$cpu"-ucode nvidia nvidia-utils nvidia-settings
+# Drivers and development packackes
+pacman -S "$cpu"-ucode nvidia nvidia-utils nvidia-settings base-devel linux-headers
 
 # Grub configuration
+pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
