@@ -12,9 +12,9 @@ wipefs -a "$dev"
 printf "g\nn\n\n\n+256M\nt\n1\nn\n\n\n\nw\n" | sudo fdisk "$dev"
 mkfs.fat -F32 "$dev"1
 mkfs.ext4 "$dev"2
+mount "$dev"2 /mnt
 mkdir /mnt/boot
 mount "$dev"1 /mnt/boot
-mount "$dev"2 /mnt
 
 # Install Linux
 pacstrap /mnt base linux linux-firmware
