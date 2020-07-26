@@ -22,7 +22,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install packages
-pacman -S sudo nano git xorg sddm plasma-desktop kde-applications networkmanager nautilus firefox terminator
+pacman -S sudo nano git xorg sddm plasma-desktop kde-applications networkmanager
 
 # Enable services
 systemctl enable NetworkManager.service
