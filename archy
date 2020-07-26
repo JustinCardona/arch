@@ -1,4 +1,5 @@
 pacman -Syyy
+clear
 PS3='Choose your CPU by entering a number: '
 select CPU in intel amd other
 do
