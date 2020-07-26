@@ -69,7 +69,7 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S "$desktop" "$cpu" "$gpu" base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf
+pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf "$desktop" "$cpu" "$gpu"
 
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
