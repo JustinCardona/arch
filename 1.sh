@@ -1,4 +1,4 @@
-# User Information
+# Disk Information
 lsblk
 read -p "Enter the device name you want to install to: " device
 dev="/dev/$device"
@@ -21,3 +21,5 @@ pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 cp 2.sh /mnt
 arch-chroot /mnt sh 2.sh
+umount -a
+reboot
