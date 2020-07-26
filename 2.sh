@@ -16,13 +16,13 @@ passwd
 # Drivers and development packackes
 pacman -S "$cpu"-ucode nvidia nvidia-utils nvidia-settings base-devel linux-headers
 
-# Grub configuration
+# Grub configuration   
 pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install packages
-pacman -S sudo nano git xorg sddm plasma-desktop kde-applications networkmanager
+pacman -S sudo nano git xorg sddm plasma-desktop kde-applications networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf 
 
 # Enable services
 systemctl enable NetworkManager.service
@@ -31,6 +31,6 @@ systemctl enable sddm.service
 # User configuration
 useradd -mG wheel "$name"
 passwd "$name"
-EDITOR=nano visudo
+echo "%wheel ALL=(ALL) ALL" > /etc/sudoers
 
 echo "Type 'exit' then 'umount -a' then 'reboot' then install yay"
