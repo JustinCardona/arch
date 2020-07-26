@@ -69,7 +69,10 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf "$desktop" "$cpu" "$gpu"
+pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf
+pacman -S "$cpu"
+pacman -S "$gpu"
+pacman -S "$desktop"
 
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -77,10 +80,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # Enable services
 systemctl enable NetworkManager.service
-if [[ "$choice" = "Full" ]]
-then
-    echo "systemctl enable sddm.service"
-fi
+systemctl enable sddm.service
 
 # User configuration
 useradd -mG wheel "$name"
