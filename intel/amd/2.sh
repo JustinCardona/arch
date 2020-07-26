@@ -18,7 +18,7 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S base-devel linux-headers grub efibootmgr  intel-ucode xf86-video-amdgpu mesa sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg sddm plasma-desktop kde-applications nautilus firefox
+pacman -S base-devel linux-headers grub efibootmgr  intel-ucode xf86-video-amdgpu mesa sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg sddm plasma-meta kde-applications code nautilus firefox
 
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
