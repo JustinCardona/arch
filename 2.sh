@@ -14,46 +14,12 @@ do
 done
 if [[ "$processor" = "intel" ]]
 then
-    cpu="intel-ucode"
+    cpu="pacman -S intel-ucode"
 elif [[ "$processor" = "amd" ]]
 then
-    cpu="amd-ucode"
+    cpu="pacman -S amd-ucode"
 else
     cpu=""
-fi
-
-#GPU information
-clear
-PS3="Select your GPU brand by entering a number: "
-select graphics in nvidia amd other
-do
-    break
-done
-if [[ "$graphics" = "nvidia" ]]
-then
-    gpu="nvidia nvidia-utils nvidia-settings"
-elif [[ "$graphics" = "amd" ]]
-then
-    gpu="xf86-video-amdgpu mesa"
-else
-    gpu=""
-fi
-
-# Desktop configuration
-clear
-PS3="Select your install type by entering a number: "
-select choice in Full Minimal Nothing
-do
-    break
-done
-if [[ "$choice" = "Full" ]]
-then
-    desktop="xorg sddm plasma-desktop kde-applications firefox"
-elif [[ "$choice" = "Minimal" ]]
-then
-    desktop="xorg xorg-xinit i3-wm i3-status i3-lock bluez bluez-utils dmenu"
-else
-    desktop=""
 fi
 
 # Host configuration
@@ -69,10 +35,8 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf
-pacman -S "$cpu"
-pacman -S "$gpu"
-pacman -S "$desktop"
+pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg sddm plasma-desktop kde-applications firefox nvidia nvidia-utils nvidia-settings
+"$cpu"
 
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
