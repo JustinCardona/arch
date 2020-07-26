@@ -8,14 +8,14 @@ read -p "Enter your zone: " zone
 # CPU information
 clear
 PS3="Select your CPU brand by entering a number: "
-select choice in intel amd other
+select processor in intel amd other
 do
     break
 done
-if [[ "$choice" = "intel" ]]
+if [[ "$processor" = "intel" ]]
 then
     cpu="intel-ucode"
-elif [[ "$choice" = "amd" ]]
+elif [[ "$processor" = "amd" ]]
 then
     cpu="amd-ucode"
 else
@@ -25,14 +25,14 @@ fi
 #GPU information
 clear
 PS3="Select your GPU brand by entering a number: "
-select choice in nvidia amd other
+select graphics in nvidia amd other
 do
     break
 done
-if [[ "$choice" = "nvidia" ]]
+if [[ "$graphics" = "nvidia" ]]
 then
     gpu="nvidia nvidia-utils nvidia-settings"
-elif [[ "$choice" = "amd" ]]
+elif [[ "$graphics" = "amd" ]]
 then
     gpu="xf86-video-amdgpu mesa"
 else
@@ -84,7 +84,6 @@ systemctl enable sddm.service
 
 # User configuration
 useradd -mG wheel "$name"
-clear
 echo "Set a password for your user"
 passwd "$name"
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers
