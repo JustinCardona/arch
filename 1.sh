@@ -1,4 +1,5 @@
 # Disk Information
+pacman -Syyy
 clear
 lsblk
 read -p "Enter the device name you want to install to: " device

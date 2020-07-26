@@ -5,23 +5,6 @@ read -p "Enter your name: " name
 read -p "Enter your region: " region
 read -p "Enter your zone: " zone
 
-# CPU information
-clear
-PS3="Select your CPU brand by entering a number: "
-select processor in intel amd other
-do
-    break
-done
-if [[ "$processor" = "intel" ]]
-then
-    cpu="pacman -S intel-ucode"
-elif [[ "$processor" = "amd" ]]
-then
-    cpu="pacman -S amd-ucode"
-else
-    cpu=""
-fi
-
 # Host configuration
 ln -sf /usr/share/zoneinfo/"$region"/"$zone" /etc/localtime
 hwclock --systohc --utc
@@ -35,8 +18,7 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg sddm plasma-desktop kde-applications firefox nvidia nvidia-utils nvidia-settings
-"$cpu"
+pacman -S base-devel linux-headers grub efibootmgr  intel-ucode nvidia nvidia-utils nvidia-settings sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg sddm plasma-desktop kde-applications firefox
 
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -48,6 +30,7 @@ systemctl enable sddm.service
 
 # User configuration
 useradd -mG wheel "$name"
+clear
 echo "Set a password for your user"
 passwd "$name"
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers
