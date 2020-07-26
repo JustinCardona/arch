@@ -19,4 +19,4 @@ mount "$dev"1 /mnt/boot
 # Install Linux
 pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
+arch-chroot /mnt sh 2.sh
