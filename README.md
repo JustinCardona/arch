@@ -7,6 +7,6 @@
 - Obtain an Arch Linux ISO from https://www.archlinux.org/download/
 - Create an installation medium and boot from it. Visit Arch Linux's Guide for more information. https://wiki.archlinux.org/index.php/Installation_guide#Prepare_an_installation_medium
 - When you have reached the ISO command line type:
-    - curl -L https://raw.githubusercontent.com/JustinCardona/arch/master/archy > archy
-    - sh install
+    - curl -L JustinCardona.github.io/archy> archy
+    - sh archy
 ## Good Luck 
