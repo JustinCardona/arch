@@ -1,4 +1,6 @@
 # Disk Information
+clear
+read -p "Press any key to begin the installation"
 pacman -Syyy
 clear
 lsblk
