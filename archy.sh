@@ -1,5 +1,3 @@
-pacman -Syyy
-clear
 # Disk Information
 pacman -Syyy
 clear
