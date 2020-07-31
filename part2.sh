@@ -19,6 +19,7 @@ passwd
 
 # Install packages
 echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist"> /etc/pacman.conf
+pacman -Syyy
 pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
 
 # CPU configuration
