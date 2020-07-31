@@ -24,6 +24,7 @@ nano /etc/pacman.conf
 pacman -Syyy
 
 # CPU configuration
+clear
 PS3='Choose your CPU by entering a number: '
 select processor in intel amd other
 do
@@ -38,6 +39,7 @@ then
 fi
 
 # GPU configuration
+clear
 PS3='Choose your GPU by entering a number: '
 select graphics in nvidia amd other
 do
@@ -52,6 +54,7 @@ then
 fi
 
 # Desktop configuration
+clear
 PS3='Choose your Desktop Environment by entering a number: '
 select desktop in full minimal other
 do
