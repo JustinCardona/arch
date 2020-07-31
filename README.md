@@ -2,7 +2,6 @@
 ## Description
 - This is an automated installer for Arch Linux.
 - It creates a GPT partition on the drive of your choice, making an EFI partition and a root partition.
-- It installs the SDDM display manager and the KDE plasma desktop environment.
 ## Usage
 - Obtain the Arch Linux ISO from https://drive.google.com/uc?export=download&id=1QzHRjETR_XeA1D-n-FZy70ufDQyt8THR
 - Type:
