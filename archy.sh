@@ -81,7 +81,6 @@ part2 () {
     if [ "$desktop" = "full" ]
     then
         sudo pacman -S sddm plasma-meta kde-applications code nautilus firefox
-        systemctl enable sddm.service
     elif [ "$desktop" = "minimal" ]
     then
         sudo pacman -S xorg-xinit i3-wm i3lock i3status dmenu terminator
@@ -93,6 +92,7 @@ part2 () {
 
     # Enable services
     systemctl enable NetworkManager.service
+    systemctl enable sddm.service
 
     # User configuration
     useradd -mG wheel "$name"
