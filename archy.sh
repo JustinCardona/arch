@@ -23,7 +23,7 @@ mount "$dev"1 /mnt/boot
 # Install Linux
 pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
-curl -L JustinCardona.github.io/part2.sh
+curl -L JustinCardona.github.io/part2.sh > part2.sh
 cp part2.sh /mnt
 arch-chroot /mnt sh part2.sh
 umount -a
