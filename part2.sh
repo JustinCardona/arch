@@ -19,7 +19,8 @@ passwd
 
 # Install packages
 pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
-read -p "Include multilib"
+clear
+read -p "Include multilib so that you can download GPU drivers"
 nano /etc/pacman.conf
 pacman -Syyy
 
