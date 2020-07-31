@@ -4,6 +4,25 @@ read -p "Enter the host name: " host
 read -p "Enter your name: " name
 read -p "Enter your region: " region
 read -p "Enter your zone: " zone
+clear
+PS3='Choose your CPU by entering a number: '
+select processor in intel amd other
+do
+    break
+done
+
+clear
+PS3='Choose your GPU by entering a number: '
+select graphics in nvidia amd other
+do
+    break
+done
+clear
+PS3='Choose your Desktop Environment by entering a number: '
+select desktop in full minimal other
+do
+    break
+done
 
 # Host configuration
 ln -sf /usr/share/zoneinfo/"$region"/"$zone" /etc/localtime
@@ -25,12 +44,6 @@ nano /etc/pacman.conf
 pacman -Syyy
 
 # CPU configuration
-clear
-PS3='Choose your CPU by entering a number: '
-select processor in intel amd other
-do
-    break
-done
 if [ "$processor" = "intel" ]
 then
     sudo pacman -S intel-ucode
@@ -40,12 +53,6 @@ then
 fi
 
 # GPU configuration
-clear
-PS3='Choose your GPU by entering a number: '
-select graphics in nvidia amd other
-do
-    break
-done
 if [ "$graphics" = "nvidia" ]
 then
     sudo pacman -S nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
@@ -55,12 +62,6 @@ then
 fi
 
 # Desktop configuration
-clear
-PS3='Choose your Desktop Environment by entering a number: '
-select desktop in full minimal other
-do
-    break
-done
 if [ "$desktop" = "full" ]
 then
     sudo pacman -S sddm plasma-meta kde-applications code nautilus firefox
