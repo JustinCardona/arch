@@ -4,9 +4,7 @@
 - It creates a GPT partition on the drive of your choice, making an EFI partition and a root partition.
 - It installs the SDDM display manager and the KDE plasma desktop environment.
 ## Usage
-- Obtain an Arch Linux ISO from https://www.archlinux.org/download/
-- Create an installation medium and boot from it. Visit Arch Linux's Guide for more information. https://wiki.archlinux.org/index.php/Installation_guide#Prepare_an_installation_medium
-- When you have reached the ISO command line type:
-    - curl -L JustinCardona.github.io/archy > archy
-    - sh archy
+- Obtain the Arch Linux ISO from https://drive.google.com/uc?export=download&id=1QzHRjETR_XeA1D-n-FZy70ufDQyt8THR
+- Type:
+    - sh archy.sh
 ## Good Luck 
