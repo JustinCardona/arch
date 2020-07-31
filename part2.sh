@@ -64,7 +64,7 @@ fi
 # Desktop configuration
 if [ "$desktop" = "full" ]
 then
-    sudo pacman -S sddm plasma-meta kde-applications code nautilus firefox
+    sudo pacman -S sddm plasma-meta kde-applications
 elif [ "$desktop" = "minimal" ]
 then
     sudo pacman -S xorg-xinit i3-wm i3lock i3status dmenu terminator
