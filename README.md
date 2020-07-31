@@ -6,7 +6,5 @@
 - Full support for Intel and AMD CPUs as well as NVIDIA and AMD GPUs
 ## Usage
 - Obtain the Arch Linux ISO from https://drive.google.com/uc?export=download&id=1QzHRjETR_XeA1D-n-FZy70ufDQyt8THR
-- Boot from the ISO and type:
-    - sh archy.sh
 - Follow the prompts
 ## Good Luck 
