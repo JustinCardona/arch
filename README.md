@@ -7,5 +7,5 @@
 ## Usage
 1. Obtain the Arch Linux ISO from https://drive.google.com/uc?export=download&id=1QzHRjETR_XeA1D-n-FZy70ufDQyt8THR
 2. Follow the prompts. 
-- Note: It is recomended to use the post install scripts after minimal installation.
+- Note: It is recomended to use the i3 post install script after minimal installation.
 ## Good Luck 
