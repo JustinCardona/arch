@@ -1,0 +1,95 @@
+Looking for git in: git
+Using git 2.28.0 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/justin/JustinCardona.github.io
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/justin/JustinCardona.github.io/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :i3notes.txt
+> git ls-files --stage -- /home/justin/JustinCardona.github.io/i3notes.txt
+> git cat-file -s 6b0ed283170db4b9a90dba32a76d0074baaf6d24
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/justin/JustinCardona.github.io/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git show --textconv :postinstall.sh
+> git ls-files --stage -- /home/justin/JustinCardona.github.io/postinstall.sh
+> git cat-file -s 0c8ccbda9b14ebf4dc249822b3b2689cce548d17
+> git show --textconv :kde.sh
+> git ls-files --stage -- /home/justin/JustinCardona.github.io/kde.sh
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/justin/JustinCardona.github.io/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/justin/JustinCardona.github.io/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git show --textconv :PostInstall/kde.sh
+> git ls-files --stage -- /home/justin/JustinCardona.github.io/PostInstall/kde.sh
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/justin/JustinCardona.github.io/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git ls-files --stage -- /home/justin/JustinCardona.github.io/PostInstall/kde.sh
+> git rev-parse --symbolic-full-name master@{u}
+> git cat-file -s 0c8ccbda9b14ebf4dc249822b3b2689cce548d17
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git show --textconv :PostInstall/kde.sh
+Warning: Failed to watch ref '/home/justin/JustinCardona.github.io/.git/refs/remotes/origin/master', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git ls-files --stage -- /home/justin/JustinCardona.github.io/PostInstall/kde.sh
+> git rev-parse master
+> git cat-file -s 0c8ccbda9b14ebf4dc249822b3b2689cce548d17
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git show --textconv :PostInstall/kde.sh
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
