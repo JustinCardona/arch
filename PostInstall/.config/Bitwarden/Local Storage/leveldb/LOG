@@ -1,1 +1,3 @@
-2020/08/02-15:35:05.180 61a Reusing MANIFEST /home/justin/.config/Bitwarden/Local Storage/leveldb/MANIFEST-000001
+2020/08/02-17:17:15.015 24b Reusing MANIFEST /home/justin/.config/Bitwarden/Local Storage/leveldb/MANIFEST-000001
+2020/08/02-17:17:15.016 24b Recovering log #3
+2020/08/02-17:17:15.016 24b Reusing old log /home/justin/.config/Bitwarden/Local Storage/leveldb/000003.log 
