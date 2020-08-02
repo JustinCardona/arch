@@ -67,7 +67,7 @@ then
     sudo pacman -S sddm plasma-meta kde-applications
 elif [ "$desktop" = "minimal" ]
 then
-    sudo pacman -S xorg-xinit i3-wm i3lock i3status dmenu terminator
+    sudo pacman -S xorg-xinit i3-wm i3lock rofi dmenu terminator polybar firefox
 fi
 
 # Grub configuration
