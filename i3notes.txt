@@ -1,4 +1,0 @@
-XINIT LOGIN
-sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
-sudo nano ~/.xinitrc
-
