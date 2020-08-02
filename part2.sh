@@ -19,7 +19,7 @@ do
 done
 clear
 PS3='Choose your Desktop Environment by entering a number: '
-select desktop in full minimal other
+select desktop in full minimal
 do
     break
 done
@@ -65,9 +65,6 @@ fi
 if [ "$desktop" = "full" ]
 then
     sudo pacman -S sddm plasma-meta kde-applications
-elif [ "$desktop" = "minimal" ]
-then
-    sudo pacman -S xorg-xinit i3-wm i3lock rofi dmenu terminator polybar firefox
 fi
 
 # Grub configuration
