@@ -175,6 +175,7 @@ mode "resize" {
 bindsym $mod+d mode "resize"
 
 # Startup
+exec_always --no-startup-id numlockx on
 exec bitwarden-desktop
 exec discord
 
