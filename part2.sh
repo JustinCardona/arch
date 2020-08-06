@@ -66,7 +66,7 @@ fi
 # Desktop configuration
 if [ "$desktop" = "full" ]
 then
-    sudo pacman -S numlockx sddm picom i3-wm i3lock feh dmenu rofi terminator jdk-openjdk texlive-core dotnet-runtime dotnet-sdk ttf-font-awesome ttf-ubuntu-font-family xorg-fonts-misc materia-gtk-theme papirus-icon-theme lxappearance flameshot firefox 
+    sudo pacman -S numlockx sddm picom i3-wm i3lock feh dmenu rofi terminator jdk-openjdk texlive-core dotnet-runtime dotnet-sdk ttf-font-awesome ttf-ubuntu-font-family xorg-fonts-misc materia-gtk-theme papirus-icon-theme lxappearance
 elif [ "$desktop" = "basic" ]
 then
     sudo pacman -S jdk-openjdk texlive-core dotnet-runtime dotnet-sdk ttf-font-awesome links mutt
