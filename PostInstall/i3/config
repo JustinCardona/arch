@@ -207,6 +207,7 @@ bindsym $mod+t exec code
 bindsym $mod+g exec lutris
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+w [class="^.*"] border toggle
+bindsym $mod+i exec terminator -e"links"
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

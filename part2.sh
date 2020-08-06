@@ -1,9 +1,11 @@
+
 # User information
 clear
 read -p "Enter the host name: " host
 read -p "Enter your name: " name
 read -p "Enter your region: " region
 read -p "Enter your zone: " zone
+
 clear
 PS3='Choose your CPU by entering a number: '
 select processor in intel amd other
@@ -19,7 +21,7 @@ do
 done
 clear
 PS3='Choose your Desktop Environment by entering a number: '
-select desktop in full minimal
+select desktop in full basic
 do
     break
 done
@@ -31,7 +33,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.gen
 locale-gen
 echo "en_US.UTF-8" > /etc/locale.conf
 echo "$host" > /etc/hostname
-echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t$host.localdomain	$host"> /etc/hosts
+echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t$host.localdomain\t$host"> /etc/hosts
 clear
 echo "Set a password for the root user (admin)"
 passwd
@@ -39,7 +41,7 @@ passwd
 # Install packages
 pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
 clear
-read -p "Include multilib so that you can download GPU drivers"
+read -p "Include multilib so that you can download proprietary GPU drivers"
 nano /etc/pacman.conf
 pacman -Syyy
 
@@ -64,7 +66,11 @@ fi
 # Desktop configuration
 if [ "$desktop" = "full" ]
 then
-    sudo pacman -S sddm plasma-meta kde-applications
+    sudo pacman -S numlockx sddm picom i3-wm i3lock feh dmenu rofi terminator jdk-openjdk texlive-core dotnet-runtime dotnet-sdk ttf-font-awesome ttf-ubuntu-font-family xorg-fonts-misc materia-gtk-theme papirus-icon-theme lxappearance flameshot firefox 
+elif [ "$desktop" = "basic" ]
+then
+    sudo pacman -S jdk-openjdk texlive-core dotnet-runtime dotnet-sdk ttf-font-awesome links mutt
+
 fi
 
 # Grub configuration
