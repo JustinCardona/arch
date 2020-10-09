@@ -14,7 +14,7 @@ done
 if [ "$choice" = "yes" ]
 then
     sudo pacman -S flameshot code gimp shotcut blender lutris discord firefox
-    yay -S bitdefender
+    yay -S bitwarden
     git clone https://github.com/simonesestito/dark-arch-sddm
     cd dark-arch-sddm
     ./install.sh
