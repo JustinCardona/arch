@@ -39,10 +39,10 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S base-devel linux-headers grub efibootmgr sudo nano git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
+pacman -S base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
 clear
 read -p "Include multilib so that you can download proprietary GPU drivers"
-nano /etc/pacman.conf
+vim /etc/pacman.conf
 pacman -Syyy
 
 # CPU configuration
@@ -66,10 +66,10 @@ fi
 # Desktop configuration
 if [ "$desktop" = "full" ]
 then
-    sudo pacman -S numlockx sddm picom i3-wm i3lock feh dmenu rofi terminator jdk-openjdk texlive-core dotnet-runtime dotnet-sdk ttf-font-awesome ttf-ubuntu-font-family xorg-fonts-misc materia-gtk-theme papirus-icon-theme lxappearance
+    sudo pacman -S sddm picom i3-wm i3lock feh dmenu rofi terminator jdk-openjdk texlive-core dotnet-runtime dotnet-sdk python-pip xorg-fonts-misc lxappearance
 elif [ "$desktop" = "basic" ]
 then
-    sudo pacman -S jdk-openjdk texlive-core dotnet-runtime dotnet-sdk ttf-font-awesome links mutt
+    sudo pacman -S jdk-openjdk dotnet-runtime dotnet-sdk links mutt
 
 fi
 
