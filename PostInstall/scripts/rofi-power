@@ -36,7 +36,7 @@ then
         systemctl poweroff
         ;;
       Lock)
-	i3lock -c 000000
+	i3-msg exit
 	;;
       *)
         ;;
