@@ -57,7 +57,7 @@ then
 fi
 
 # Desktop configuration
-sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader sddm i3-wm lxappearance dmenu rofi terminator xorg-fonts-misc feh texlive-core python-pip
+sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader xorg-fonts-misc python-pip sddm i3-wm lxappearance texlive-core dmenu rofi terminator feh
 
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB

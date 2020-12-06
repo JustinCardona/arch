@@ -26,4 +26,4 @@ curl -L JustinCardona.github.io/setup.sh > setup.sh
 mv setup.sh /mnt
 arch-chroot /mnt sh setup.sh
 umount -a
-rebbot
+reboot
