@@ -33,7 +33,6 @@ passwd
 
 # Install packages
 pacman -S base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
-clear
 echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Syyy
 
