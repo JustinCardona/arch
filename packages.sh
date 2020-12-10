@@ -10,4 +10,4 @@ cp -a PostInstall ~/.config
 cd /etc
 sudo git clone https://github.com/ChrisTitusTech/firewallsetup.git
 cd firewallsetup
-./firewal
+./firewall
