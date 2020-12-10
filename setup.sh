@@ -65,8 +65,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager.service
 systemctl enable sddm.service
 systemctl enable sshd.service
-# debugging step
-read -p ""
 # User configuration
 useradd -mG wheel "$name"
 clear
