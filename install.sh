@@ -17,7 +17,7 @@ mkfs.fat -F32 "$efip"
 mkfs.ext4 "$rootp"
 mount "$rootp" /mnt
 mkdir /mnt/boot
-mount "$efi" /mnt/boot
+mount "$efip" /mnt/boot
 
 # Installation
 pacstrap /mnt base linux linux-firmware
