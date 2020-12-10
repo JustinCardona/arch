@@ -34,8 +34,7 @@ passwd
 # Install packages
 pacman -S base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
 clear
-read -p "Include multilib so that you can download proprietary GPU drivers"
-vim /etc/pacman.conf
+echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Syyy
 
 # CPU configuration
