@@ -1,4 +1,5 @@
 # Preparation
+clear
 pacman -Syyy
 timedatectl set-ntp true
 
