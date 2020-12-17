@@ -32,30 +32,30 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
+pacman -S --noconfirm base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
 echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Syyy
 
 # CPU configuration
 if [ "$processor" = "intel" ]
 then
-    sudo pacman -S intel-ucode
+    sudo pacman -S --noconfirm intel-ucode
 elif [ "$processor" = "amd" ]
 then
-    sudo pacman -S amd-ucode
+    sudo pacman -S --noconfirm amd-ucode
 fi
 
 # GPU configuration
 if [ "$graphics" = "nvidia" ]
 then
-    sudo pacman -S nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings
+    sudo pacman -S --noconfirm nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings
 elif [ "$graphics" = "amd" ]
 then
-    sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon
+    sudo pacman -S --noconfirm lib32-mesa vulkan-radeon lib32-vulkan-radeon
 fi
 
 # Desktop configuration
-sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader xorg-fonts-misc python-pip sddm i3-wm lxappearance texlive-core dmenu rofi terminator feh
+sudo pacman -S --noconfirm vulkan-icd-loader lib32-vulkan-icd-loader xorg-fonts-misc python-pip sddm i3-wm lxappearance texlive-core dmenu rofi terminator feh
 
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
