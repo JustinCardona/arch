@@ -71,19 +71,3 @@ clear
 echo "Set a password for your user"
 passwd "$name"
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers
-######
-cd /home/$name
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si PKGBUILD
-sudo pacman -S --noconfirm flameshot nautilus code gimp shotcut blender discord firefox
-yay -S polybar oreo-cursors-git numix-icon-theme-git vertex-themes chili-sddm-theme bitwarden vlc xournal
-read -p "Change the current SDDM theme to chili. Afterwards go to lxappearance to change system themes."
-sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
-cd /home/$name/JustinCardona.github.io
-cp -a PostInstall/. ~/.config
-cd /etc
-sudo git clone https://github.com/ChrisTitusTech/firewallsetup.git
-cd firewallsetup
-chmod +x firewall
-sudo ./firewall
