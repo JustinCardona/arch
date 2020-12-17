@@ -10,6 +10,6 @@
   - git clone https://github.com/JustinCardona/JustinCardona.github.io.git; sh JustinCardona.github.io/packages.sh
 - Do not be alarmed by the error messages presented on restart. Simply press WIN+ENTER or ALT+ENTER to open the terminal and execute the above command.
 
-### Information
+## Information
 - For additional information about installing Archlinux visit the wiki:
   - https://wiki.archlinux.org/index.php/installation_guide
