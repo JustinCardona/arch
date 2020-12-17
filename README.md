@@ -6,7 +6,6 @@
 ## Installation Instructions
 - After booting from an Arch ISO, run the following command.
   - curl -L JustinCardona.github.io/install.sh > install; sh install
-- Follow the prompts until you arrive at the graphical login screen. Is it indeed ugly, we will fix that soon.
 - After the restart, open a terminal and type the following command.
   - git clone https://github.com/JustinCardona/JustinCardona.github.io.git; sh JustinCardona.github.io/packages.sh
 - Do not be alarmed by the error messages presented on restart. Simply press WIN+ENTER or ALT+ENTER to open the terminal and execute the above command.
