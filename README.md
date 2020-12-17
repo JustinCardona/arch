@@ -8,6 +8,7 @@
   - curl -L JustinCardona.github.io/install.sh > install; sh install
 - After the restart, open a terminal and type the following command.
   - git clone https://github.com/JustinCardona/JustinCardona.github.io.git; sh JustinCardona.github.io/packages.sh
+- Do not be alarmed by the error messages presented on restart. Simply press WIN+ENTER or ALT+ENTER to open the terminal and execute the above command.
 
 ### Information
 - For additional information about installing Archlinux visit the wiki:
