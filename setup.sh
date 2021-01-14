@@ -32,7 +32,7 @@ echo "Set a password for the root user (admin)"
 passwd
 
 # Install packages
-pacman -S --noconfirm base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg 
+pacman -S --noconfirm base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg
 echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Syyy
 
@@ -54,17 +54,13 @@ then
     sudo pacman -S --noconfirm lib32-mesa vulkan-radeon lib32-vulkan-radeon
 fi
 
-# Desktop configuration
-sudo pacman -S --noconfirm vulkan-icd-loader lib32-vulkan-icd-loader xorg-fonts-misc python-pip sddm i3-wm lxappearance texlive-core dmenu rofi terminator feh
-
 # Grub configuration
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Enable services
 systemctl enable NetworkManager.service
-systemctl enable sddm.service
-systemctl enable sshd.service
+
 # User configuration
 useradd -mG wheel "$name"
 clear
