@@ -187,12 +187,15 @@ for_window [class="Spotify"] move to workspace $ws1
 for_window [class="^.*"] border pixel 1
 
 # Display
-exec_always feh --bg-fill /home/justin/Media/wallpaper.png
 set $bgcolor	#b3b3ffa3
 set $ibgcolor	#00000000
 set $ubgcolor	#ff0000
 set $textcolor	#ffffff
 set $itextcolor	#000000
+set $m1 HDMI-0
+set $m2 DP-0
+exec_always xrandr --output $m2 --right-of $m1
+exec_always feh --bg-fill /home/justin/Media/wallpaper.png
 
 # Windows		border		background		text		indicator
 client.focused		$bgcolor	$bgcolor		$textcolor	$bgcolor
@@ -203,7 +206,6 @@ client.urgent		$ubgcolor	$ubgcolor		$textcolor	$ubgcolor
 # Keybindings
 bindsym $mod+Escape exec .config/scripts/rofi-power
 bindsym $mod+b exec firefox
-bindsym $mod+t exec code
 bindsym $mod+e exec nautilus
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+w [class="^.*"] border toggle
