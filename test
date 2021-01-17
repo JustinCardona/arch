@@ -1,4 +1,0 @@
-if [ `lspci -vnn | grep -c "NVIDIA"` -ge 1 ]
-then
-	echo "nvidia"
-fi
