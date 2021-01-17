@@ -6,7 +6,7 @@
 
 # 2016 Oliver Kraitschy - http://okraits.de
 
-OPTIONS="Reboot\nPower-off\nLock"
+OPTIONS="Reboot\nPower-off\nLog-out"
 
 # source configuration or use default values
 if [ -f $HOME/.config/rofi-power/config ]; then
@@ -35,7 +35,7 @@ then
       Power-off)
         systemctl poweroff
         ;;
-      Lock)
+      Log-out)
 	i3-msg exit
 	;;
       *)
