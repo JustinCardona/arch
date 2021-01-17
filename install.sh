@@ -2,7 +2,6 @@
 clear
 pacman -Syyy
 timedatectl set-ntp true
-
 # Disk Preparation
 disks=$(lsblk -p -n -l -o NAME -e 7,11)
 PS3='Enter the number of device name you want to install to: '
@@ -21,10 +20,11 @@ mkdir /mnt/boot
 mount "$efip" /mnt/boot
 
 # Installation
-pacstrap /mnt base linux linux-firmware
+pacstrap /mnt base linux linux-firmware base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg
 genfstab -U /mnt >> /mnt/etc/fstab
 curl -L JustinCardona.github.io/setup.sh > setup.sh
 mv setup.sh /mnt
 arch-chroot /mnt sh setup.sh
+rm /mnt/setup.sh
 umount -a
 reboot
