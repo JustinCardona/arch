@@ -1,23 +1,8 @@
 # User information
-clear
-read -p "Enter the host name: " host
-read -p "Enter your name: " name
-read -p "Enter your region: " region
-read -p "Enter your zone: " zone
-
-clear
-PS3='Choose your CPU brand by entering a number: '
-select processor in intel amd other
-do
-    break
-done
-
-clear
-PS3='Choose your GPU brand by entering a number: '
-select graphics in nvidia amd other
-do
-    break
-done
+host="computer"
+name="justin"
+region="Canada"
+zone="Eastern"
 
 # Host configuration
 ln -sf /usr/share/zoneinfo/"$region"/"$zone" /etc/localtime
@@ -36,19 +21,19 @@ echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Syyy
 
 # CPU configuration
-if [ "$processor" = "intel" ]
+if [ cat /proc/cpuinfo | grep -c "intel" ]
 then
     sudo pacman -S --noconfirm intel-ucode
-elif [ "$processor" = "amd" ]
+elif [ cat /proc/cpuinfo | grep -c "amd" ]
 then
     sudo pacman -S --noconfirm amd-ucode
 fi
 
 # GPU configuration
-if [ "$graphics" = "nvidia" ]
+if [ `lspci -vnn | grep -c "NVIDIA"` -ge 1 ]
 then
     sudo pacman -S --noconfirm nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings
-elif [ "$graphics" = "amd" ]
+elif [ `lspci -vnn | grep -c "AMD"` -ge 1 ]
 then
     sudo pacman -S --noconfirm lib32-mesa vulkan-radeon lib32-vulkan-radeon
 fi
