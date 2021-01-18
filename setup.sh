@@ -32,10 +32,10 @@ fi
 # GPU configuration
 if [ `lspci -vnn | grep -c "NVIDIA"` -ge 1 ]
 then
-    sudo pacman -S --noconfirm nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings cuda cudnn
+    sudo pacman -S --noconfirm cuda cudnn lib32-nvidia-utils nvidia-dkms nvidia-settings nvidia-utils
 elif [ `lspci -vnn | grep -c "AMD"` -ge 1 ]
 then
-    sudo pacman -S --noconfirm lib32-mesa vulkan-radeon lib32-vulkan-radeon
+    sudo pacman -S --noconfirm lib32-mesa lib32-vulkan-radeon vulkan-radeon
 fi
 
 # Grub configuration
