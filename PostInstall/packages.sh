@@ -5,6 +5,6 @@ cd yay
 makepkg -si PKGBUILD
 
 # Install desktop and applications
-yay -S --noconfirm vulkan-icd-loader lib32-vulkan-icd-loader xorg-fonts-misc sddm i3-wm lxappearance dmenu rofi terminator feh polybar oreo-cursors-git numix-icon-theme-git vertex-themes chili-sddm-theme brave-bin bitwarden discord vlc flameshot nautilus anaconda 
+yay -S --noconfirm anaconda bitwarden brave-bin chili-sddm-theme discord dmenu feh flameshot i3-wm lib32-vulkan-icd-loader lxappearance nautilus numix-icon-theme-git oreo-cursors-git polybar rofi sddm terminator ttf-roboto vertex-themes vlc vulkan-icd-loader xorg-fonts-misc 
 
 systemctl enable sddm.service
