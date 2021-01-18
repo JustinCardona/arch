@@ -164,7 +164,6 @@ exec spotify
 # Workspaces
 for_window [class="discord"] move to workspace $ws1
 for_window [class="Bitwarden"] move to workspace $ws1
-for_window [class="Spotify"] move to workspace $ws1
 for_window [class="^.*"] border pixel 1
 
 # Display
@@ -185,7 +184,7 @@ client.urgent		$ubgcolor	$ubgcolor		$textcolor	$ubgcolor
 
 # Keybindings
 bindsym $mod+Escape exec .config/scripts/rofi-power
-bindsym $mod+b exec firefox
+bindsym $mod+b exec brave
 bindsym $mod+e exec nautilus
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+w [class="^.*"] border toggle
