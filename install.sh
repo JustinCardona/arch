@@ -20,7 +20,7 @@ mkdir /mnt/boot
 mount "$efip" /mnt/boot
 
 # Installation
-pacstrap /mnt base linux linux-firmware base-devel linux-headers grub efibootmgr sudo vim git networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf xorg
+pacstrap /mnt base base-devel efibootmgr git grub linux linux-firmware linux-headers networkmanager pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf sudo vim xorg
 genfstab -U /mnt >> /mnt/etc/fstab
 curl -L JustinCardona.github.io/setup.sh > setup.sh
 mv setup.sh /mnt
