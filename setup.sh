@@ -12,9 +12,6 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "$host" > /etc/hostname
 echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t$host.localdomain\t$host"> /etc/hosts
-clear
-echo "Set a password for the root user (admin)"
-passwd
 
 # Install packages
 echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
@@ -50,4 +47,7 @@ useradd -mG wheel "$name"
 clear
 echo "Set a password for your user"
 passwd "$name"
+clear
+echo "Set a password for the root user (admin)"
+passwd
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers
