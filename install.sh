@@ -1,9 +1,10 @@
 # Preparation
-clear
 pacman -Syyy
 timedatectl set-ntp true
 # Disk Preparation
 disks=$(lsblk -p -n -l -o NAME -e 7,11)
+clear
+lsblk
 PS3='Enter the number of device name you want to install to: '
 select dev in ${disks}
 do
