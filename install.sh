@@ -23,9 +23,9 @@ mount "$efip" /mnt/boot
 # Installation
 pacstrap /mnt base base-devel efibootmgr git grub linux linux-firmware linux-headers networkmanager pulseaudio sudo vim xorg
 genfstab -U /mnt >> /mnt/etc/fstab
-curl -L JustinCardona.github.io/setup.sh > setup.sh
+curl -L JustinCardona.github.io/chroot.sh > chroot.sh
 mv setup.sh /mnt
-arch-chroot /mnt sh setup.sh
-rm /mnt/setup.sh
-# umount -a
-# reboot
+arch-chroot /mnt sh chroot.sh
+rm /mnt/chroot.sh
+umount -a
+reboot
