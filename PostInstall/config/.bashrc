@@ -11,3 +11,5 @@ PS1='[\u@\h \W]\$ '
 # Aliases
 alias clean='paru --noconfirm -Sc; rm -r ~/Downloads/*'
 alias todo='cat ~/School/toDoList'
+alias con='source /opt/anaconda/bin/activate root'
+alias coff='source /opt/anaconda/bin/deactivate root'
