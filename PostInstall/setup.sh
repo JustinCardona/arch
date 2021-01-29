@@ -2,7 +2,7 @@
 cd ~
 git clone https://aur.archlinux.org/paru.git
 cd paru
-makepkg -si PKGBUILD
+sudo makepkg -si PKGBUILD
 cd ~
 rm -rf paru
 
