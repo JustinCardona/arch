@@ -27,5 +27,5 @@ curl -L JustinCardona.github.io/chroot.sh > chroot.sh
 mv setup.sh /mnt
 arch-chroot /mnt sh chroot.sh
 rm /mnt/chroot.sh
-umount -a
-reboot
+#umount -a
+#reboot
