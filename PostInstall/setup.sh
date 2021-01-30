@@ -2,12 +2,12 @@
 cd ~
 git clone https://aur.archlinux.org/paru.git
 cd paru
-sudo makepkg -si PKGBUILD
+makepkg -si PKGBUILD
 cd ~
 rm -rf paru
 
 # Install desktop and applications
-paru feh flameshot numlockx qtile xorg-xinit alacritty
+paru alacritty breeze-default-cursor-theme breeze-gtk feh flameshot numlockx qtile xorg-xinit
 
 # Deploy configs
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
