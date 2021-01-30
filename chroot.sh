@@ -44,6 +44,7 @@ systemctl enable NetworkManager.service
 
 # User configuration
 useradd -mG wheel "$name"
+usermod -aG wheel root
 clear
 echo "Set a password for your user"
 passwd "$name"
