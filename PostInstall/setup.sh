@@ -14,5 +14,5 @@ git clone https://github.com/JustinCardona/JustinCardona.github.io.git
 cd JustinCardona.github.io/PostInstall/
 sh deployConfig.sh
 cd ~
-rm -rf JustinCardona.github.io/PostInstall/
+rm -rf JustinCardona.github.io
 startx
