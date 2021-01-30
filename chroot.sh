@@ -51,5 +51,3 @@ clear
 echo "Set a password for the root user (admin)"
 passwd
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers
-curl -L JustinCardona.github.io/PostInstall/setup.sh > setup.sh
-sh setup.sh

@@ -7,7 +7,7 @@ cd ~
 rm -rf paru
 
 # Install desktop and applications
-paru feh flameshot numlockx qtile xorg-xinit terminator
+paru feh flameshot numlockx qtile xorg-xinit alacritty
 
 # Deploy configs
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git

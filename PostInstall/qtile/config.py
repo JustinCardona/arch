@@ -36,7 +36,7 @@ from libqtile import hook
 
 
 mod = "mod4"
-terminal = "terminator"
+terminal = "alacritty"
 
 keys = [
     # Switch between windows in current stack pane
