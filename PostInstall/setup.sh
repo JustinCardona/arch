@@ -15,3 +15,4 @@ cd JustinCardona.github.io/PostInstall/
 sh deployConfig.sh
 cd ~
 rm -rf JustinCardona.github.io/PostInstall/
+startx
