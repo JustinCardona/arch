@@ -10,6 +10,7 @@ rm -rf paru
 paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx qtile xorg-xinit
 
 # Deploy configs
+mkdir .config
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
 cd JustinCardona.github.io/PostInstall/
 sh deployConfig.sh
