@@ -7,7 +7,7 @@ cd ~
 rm -rf paru
 
 # Install desktop and applications
-paru alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx qtile xorg-xinit
+paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx qtile xorg-xinit
 
 # Deploy configs
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
