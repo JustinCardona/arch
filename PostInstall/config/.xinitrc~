@@ -36,4 +36,5 @@ fi
 
 # Window manager
 exec numlockx &
-exec i3
+#exec qtile
+exec spectrwm
