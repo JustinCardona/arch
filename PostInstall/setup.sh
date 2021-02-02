@@ -7,10 +7,11 @@
 #rm -rf paru
 
 # Install desktop and applications
-paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx pulseaudio xorg xorg-fonts-misc xorg-xinit
+paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot i3-gaps lxappearance numlockx pulseaudio rofi xorg xorg-fonts-misc xorg-xinit
 
 # Configuration
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
-sed -n -e :a -e '1,5!{P;N;D;};N;ba'
-echo "exec i3" >> ~/.xinitrc
-cp /etc/i3/config ~/.config/i3/
+cp -r config/. ~
+cp i3 ~/.config
+cp polybar ~/.config
+cp scripts ~/.config
+
