@@ -7,7 +7,8 @@ cd ~
 rm -rf paru
 
 # Install desktop and applications
-paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx qtile xorg-xinit
+#paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx qtile xorg-xinit
+paru -S awesome alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx xorg-xinit
 
 # Deploy configs
 mkdir .config
