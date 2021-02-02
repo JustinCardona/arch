@@ -8,7 +8,7 @@
 
 # Install desktop and applications
 #paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx qtile xorg-xinit
-paru -S awesome alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx xorg-xinit
+paru -S awesome alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx pulseaudio xorg xorg-fonts-misc xorg-xinit
 
 # Deploy configs
 mkdir .config
