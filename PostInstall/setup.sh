@@ -10,8 +10,12 @@
 paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot i3-gaps lxappearance numlockx pulseaudio rofi xorg xorg-fonts-misc xorg-xinit
 
 # Configuration
+git clone https://github.com/JustinCardona/JustinCardona.github.io.git
+cd JustinCardona.github.io/PostInstall
 cp -r config/. ~
-cp i3 ~/.config
-cp polybar ~/.config
-cp scripts ~/.config
+cp -r i3 ~/.config
+cp -r polybar ~/.config
+cp -r scripts ~/.config
+cd
+rm -rf JustinCardona.github.io/PostInstall
 
