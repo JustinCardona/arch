@@ -1,10 +1,10 @@
 # Installing package manager
-cd ~
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si PKGBUILD
-cd ~
-rm -rf paru
+#cd ~
+#git clone https://aur.archlinux.org/paru.git
+#cd paru
+#makepkg -si PKGBUILD
+#cd ~
+#rm -rf paru
 
 # Install desktop and applications
 #paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot lxappearance numlockx qtile xorg-xinit
