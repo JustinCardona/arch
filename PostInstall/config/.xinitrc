@@ -36,4 +36,5 @@ fi
 
 # Window manager
 exec numlockx &
-exec qtile
+#exec qtile
+exec awesome
