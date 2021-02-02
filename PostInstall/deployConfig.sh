@@ -1,2 +1,2 @@
-cp -r config/* ~
-cp -r config/qtile ~/.config/
+cp -r config/. ~
+cp -r qtile ~/.config/
