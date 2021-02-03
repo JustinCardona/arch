@@ -13,9 +13,9 @@ paru -S alacritty breeze-default-cursor-theme breeze-gtk feh flameshot i3-gaps l
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
 cd JustinCardona.github.io/PostInstall
 cp -r config/. ~
-cp -r i3 ~/.config
-cp -r polybar ~/.config
-cp -r scripts ~/.config
+cp -r i3 ~/.config/
+cp -r polybar ~/.config/
+cp -r scripts ~/.config/
 cd ~
 rm -rf JustinCardona.github.io
 chmod +x ~/.config/polybar/launch.sh
