@@ -17,6 +17,6 @@ cp -r i3 ~/.config
 cp -r polybar ~/.config
 cp -r scripts ~/.config
 cd ~
-rm -rf JustinCardona.github.io/PostInstall
+rm -rf JustinCardona.github.io
 chmod +x ~/.config/polybar/launch.sh
 
