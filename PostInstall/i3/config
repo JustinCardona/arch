@@ -1,5 +1,4 @@
 # i3 config file
-
 set $mod Mod4
 
 # Use pactl to adjust volume in PulseAudio.
@@ -12,7 +11,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Brightness Control
 bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id bash -c 'b=$(xrandr --verbose | grep -i brightness | head -n 1 | cut -d" " -f2) && b2=$(echo -e "import math\nf = lambda x: (1 - 1/(1+math.exp(4*x-2)))\nprint(\\\"%.2f\\\" % f(0.1+$b))" | python) && xrandr --output HDMI-0 --brightness $b2'; exec --no-startup-id bash -c 'b=$(xrandr --verbose | grep -i brightness | head -n 1 | cut -d" " -f2) && b2=$(echo -e "import math\nf = lambda x: (1 - 1/(1+math.exp(4*x-2)))\nprint(\\\"%.2f\\\" % f(0.1+$b))" | python) && xrandr --output DP-0 --brightness $b2'
 bindsym $mod+XF86AudioLowerVolume exec --no-startup-id bash -c 'b=$(xrandr --verbose | grep -i brightness | head -n 1 | cut -d" " -f2) && b2=$(echo -e "import math\nf = lambda x: (1 - 1/(1+math.exp(4*x-2)))\nprint(\\\"%.2f\\\" % f(-0.1+$b))" | python) && xrandr --output HDMI-0 --brightness $b2';  exec --no-startup-id bash -c 'b=$(xrandr --verbose | grep -i brightness | head -n 1 | cut -d" " -f2) && b2=$(echo -e "import math\nf = lambda x: (1 - 1/(1+math.exp(4*x-2)))\nprint(\\\"%.2f\\\" % f(-0.1+$b))" | python) && xrandr --output DP-0 --brightness $b2'
-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -46,18 +44,6 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+t layout toggle
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
 
 # Define names for default workspaces
 set $ws1 "1"
