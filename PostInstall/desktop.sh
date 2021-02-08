@@ -7,7 +7,8 @@ cd ~
 rm -rf paru
 
 # Install desktop and applications
-paru -S alacritty bitwarden brave-bin breeze-default-cursor-theme breeze-gtk discord feh flameshot gimp i3-gaps lxappearance lutris numlockx polybar rofi steam steam-fonts xorg-fonts-misc xorg-xinit
+paru -S alacritty feh flameshot gimp i3-gaps lxappearance lutris numlockx polybar rofi xorg-fonts-misc xorg-xinit
+
 # Configuration
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
 cd JustinCardona.github.io/PostInstall
