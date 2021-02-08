@@ -20,7 +20,7 @@ pacman -Syyy
 # CPU configuration
 if [ cat /proc/cpuinfo | grep -c "intel" ]
 then
-    sudo pacman -S --noconfirm intel-ucode
+    sudo pacman -S --noconfirm intel-ucode lib32-mesa vulkan-intel lib32-vulkan-intel
 elif [ cat /proc/cpuinfo | grep -c "amd" ]
 then
     sudo pacman -S --noconfirm amd-ucode
@@ -29,10 +29,11 @@ fi
 # GPU configuration
 if [ `lspci -vnn | grep -c "NVIDIA"` -ge 1 ]
 then
-    sudo pacman -S --noconfirm lib32-nvidia-utils nvidia-dkms nvidia-settings nvidia-utils
+    sudo pacman -S nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+
 elif [ `lspci -vnn | grep -c "AMD"` -ge 1 ]
 then
-    sudo pacman -S --noconfirm lib32-mesa lib32-vulkan-radeon vulkan-radeon
+    pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
 fi
 
 # Grub configuration
