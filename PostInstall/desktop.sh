@@ -7,7 +7,7 @@ cd ~
 rm -rf paru
 
 # Install desktop and applications
-paru -S alacritty feh flameshot i3-gaps lxappearance numlockx polybar pulseaudio rofi xorg xorg-fonts-misc xorg-xinit
+paru -S alacritty feh flameshot i3-gaps lxappearance numlockx polybar rofi xorg-fonts-misc xorg-xinit
 
 # Configuration
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
