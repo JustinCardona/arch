@@ -16,6 +16,10 @@ cp -r config/. ~
 cp -r i3 ~/.config/
 cp -r polybar ~/.config/
 cp -r scripts ~/.config/
+sudo cp numlock/numlock /usr/local/bin/numlock
+sudo cp numlock/numlock.service /etc/systemd/system/numlock.service
+sudo chmod +x /usr/local/bin/numlock
+systemctl enable numlock.service
 cd ~
 rm -rf JustinCardona.github.io
 chmod +x ~/.config/polybar/launch.sh

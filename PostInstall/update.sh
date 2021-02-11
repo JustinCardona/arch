@@ -1,4 +1,5 @@
 cp -r ~/.config/i3 .
+cp -r ~/.config/picom.conf .
 cp -r ~/.config/polybar .
 cp -r ~/.config/scripts .
 cp ~/.bashrc config/

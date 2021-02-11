@@ -18,6 +18,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# Toggle floating 
+bindsym $mod+t floating toggle
+
 # kill focused window
 bindsym $mod+q kill
 
@@ -81,8 +84,13 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# reload the configuration file
+bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -112,7 +120,7 @@ set $ibgcolor	#00000000
 set $ubgcolor	#ff0000
 set $textcolor	#ffffff
 set $itextcolor	#000000
-exec_always picom -f
+exec_always picom -fG
 exec_always xrandr --output DP-0 --right-of HDMI-0
 exec_always feh --bg-fill /home/justin/Documents/Photos/wallpaper1.png /home/justin/Documents/Photos//wallpaper2.png
 
@@ -122,10 +130,13 @@ client.unfocused	$ibgcolor	$ibgcolor		$itextcolor	$ibgcolor
 client.focused_inactive	$ibgcolor	$ibgcolor		$itextcolor	$ibgcolor
 client.urgent		$ubgcolor	$ubgcolor		$textcolor	$ubgcolor
 
+for_window [instance="origin.exe"] floating enable
+
 # Keybindings
 bindsym $mod+Escape exec .config/scripts/rofi-power
 bindsym $mod+b exec brave
-bindsym $mod+s exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+w [class="^.*"] border toggle
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
