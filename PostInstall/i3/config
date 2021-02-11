@@ -81,12 +81,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -101,7 +97,6 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+d mode "default"
 }
-
 bindsym $mod+d mode "resize"
 
 # Gaps
@@ -110,14 +105,6 @@ smart_gaps on
 smart_borders on
 gaps inner 5
 gaps outer 0
-
-# Startup
-exec bitwarden-desktop
-exec discord
-
-# Workspaces
-for_window [class="discord"] move to workspace $ws1
-for_window [class="Bitwarden"] move to workspace $ws1
 
 # Display
 set $bgcolor	#b3b3ffa3
@@ -138,8 +125,7 @@ client.urgent		$ubgcolor	$ubgcolor		$textcolor	$ubgcolor
 # Keybindings
 bindsym $mod+Escape exec .config/scripts/rofi-power
 bindsym $mod+b exec brave
-bindsym $mod+Shift+s exec flameshot gui
-bindsym $mod+Shift+w [class="^.*"] border toggle
+bindsym $mod+s exec flameshot gui
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
