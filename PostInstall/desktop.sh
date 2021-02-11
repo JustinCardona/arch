@@ -7,7 +7,7 @@ cd ~
 rm -rf paru
 
 # Install desktop and applications
-paru -S feh flameshot i3-gaps lxappearance polybar rofi terminator xorg-xinit
+paru -S feh flameshot i3-gaps lxappearance os-prober polybar rofi terminator xorg-xinit
 
 # Configuration
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
@@ -20,3 +20,6 @@ cd ~
 rm -rf JustinCardona.github.io
 chmod +x ~/.config/polybar/launch.sh
 
+# Grub
+os-prober
+grub-mkconfig
