@@ -7,7 +7,7 @@ cd ~
 rm -rf yay
 
 # Install desktop and applications
-yay -S feh flameshot i3-gaps lxappearance os-prober picom polybar rofi terminator xorg-xinit
+yay -S feh flameshot i3-gaps lxappearance os-prober picom polybar rofi terminator pulseaudio xorg xorg-xinit
 
 # Configuration
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
