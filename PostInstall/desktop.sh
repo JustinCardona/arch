@@ -1,13 +1,13 @@
 # Installing package manager
 cd ~
-git clone https://aur.archlinux.org/paru.git
-cd paru
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si PKGBUILD
 cd ~
-rm -rf paru
+rm -rf yay
 
 # Install desktop and applications
-paru -S feh flameshot i3-gaps lxappearance os-prober polybar rofi terminator xorg-xinit
+yay -S feh flameshot i3-gaps lxappearance os-prober polybar rofi terminator xorg-xinit
 
 # Configuration
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
