@@ -21,7 +21,7 @@ mkdir /mnt/boot
 mount "$efip" /mnt/boot
 
 # Installation
-pacstrap /mnt base base-devel efibootmgr git grub linux linux-firmware linux-headers networkmanager ntp sudo vim
+pacstrap /mnt base base-devel efibootmgr git grub linux linux-firmware linux-headers networkmanager sudo vim
 genfstab -U /mnt >> /mnt/etc/fstab
 curl -L JustinCardona.github.io/chroot.sh > chroot.sh
 mv chroot.sh /mnt
