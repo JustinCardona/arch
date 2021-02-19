@@ -7,7 +7,7 @@ cd ~
 rm -rf yay
 
 # Install desktop and applications
-yay -S bitwarden-cli brave-bin breeze-default-cursor-theme breeze-gtk-theme discord feh flameshot i3-gaps os-prober picom polybar rofi terminator pulseaudio xorg xorg-xinit 
+yay -S bitwarden-cli brave-bin breeze-default-cursor-theme breeze-gtk-theme discord feh flameshot i3-gaps libreoffice numlockx os-prober picom polybar rofi terminator pulseaudio xorg xorg-xinit 
 
 # Configuration
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
@@ -27,9 +27,6 @@ chmod +x ~/.config/polybar/launch.sh
 # Grub
 os-prober
 grub-mkconfig
-
-# Enable bluetooth
-sudo systemctl enable bluetooth.service
 
 # Start window manager
 startx
