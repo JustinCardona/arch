@@ -7,7 +7,7 @@ cd ~
 rm -rf yay
 
 # Install desktop and applications
-yay -S bitwarden-cli bluez bluez-utils brave-bin breeze-default-cursor-theme breeze-gtk-theme discord feh flameshot gimp i3-gaps ntp os-prober picom polybar rofi terminator pulseaudio xorg xorg-xinit 
+yay -S bitwarden-cli brave-bin breeze-default-cursor-theme breeze-gtk-theme discord feh flameshot i3-gaps os-prober picom polybar rofi terminator pulseaudio xorg xorg-xinit 
 
 # Configuration
 git clone https://github.com/JustinCardona/JustinCardona.github.io.git
