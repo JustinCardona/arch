@@ -130,7 +130,6 @@ client.unfocused	$ibgcolor	$ibgcolor		$itextcolor	$ibgcolor
 client.focused_inactive	$ibgcolor	$ibgcolor		$itextcolor	$ibgcolor
 client.urgent		$ubgcolor	$ubgcolor		$textcolor	$ubgcolor
 
-for_window [instance="origin.exe"] floating enable
 
 # Keybindings
 bindsym $mod+Escape exec .config/scripts/rofi-power
