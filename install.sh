@@ -21,7 +21,7 @@ mkdir /mnt/boot
 mount "$efip" /mnt/boot
 
 # Installation
-pacstrap /mnt base base-devel chromium efibootmgr git grub linux linux-firmware linux-headers networkmanager plasma pulseaudio sudo vim xorg
+pacstrap /mnt base base-devel chromium dolphin efibootmgr git grub linux linux-firmware linux-headers networkmanager plasma pulseaudio sudo vim xorg
 genfstab -U /mnt >> /mnt/etc/fstab
 curl -L JustinCardona.github.io/chroot.sh > chroot.sh
 mv chroot.sh /mnt
