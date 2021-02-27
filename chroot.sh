@@ -1,5 +1,5 @@
 # User information
-host="computer"
+host="aorus"
 name="justin"
 region="Canada"
 zone="Eastern"
