@@ -43,6 +43,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Enable services
 systemctl enable NetworkManager.service
 systemctl enable iptables.service
+systemctl enable sshd.service
+systemctl enable sshd.socket
+systemctl enable systemd-timesyncd.service
 
 # User configuration
 useradd -mG wheel "$name"
