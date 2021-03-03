@@ -1,7 +1,11 @@
 # User information
+clear
 read -p "Enter the host name: " host
+clear
 read -p "Enter the user name: " name
+clear
 read -p "Enter the region: " region
+clear
 read -p "Enter the zone: " zone
 
 # Host configuration
