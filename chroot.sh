@@ -1,8 +1,8 @@
 # User information
-host="aorus"
-name="justin"
-region="Canada"
-zone="Eastern"
+read -p "Enter the host name: " host
+read -p "Enter the user name: " name
+read -p "Enter the region: " region
+read -p "Enter the zone: " zone
 
 # Host configuration
 ln -sf /usr/share/zoneinfo/"$region"/"$zone" /etc/localtime
@@ -43,8 +43,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Enable services
 systemctl enable NetworkManager.service
 systemctl enable iptables.service
-systemctl enable sshd.service
-systemctl enable sshd.socket
 systemctl enable systemd-timesyncd.service
 
 # User configuration
