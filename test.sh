@@ -31,7 +31,7 @@ then
 	mount "$efip" /mnt/boot
 	packages="${packages} efibootmgr"
 else
-	printf "n\n\n\n\n\nw\n" | fidsk "$dev"
+	printf "n\n\n\n\n\n\nw\n" | fidsk "$dev"
 	rootp=`lsblk $dev -p -n -l -o NAME -e 7,11 | sed -n 2p`
 	mkfs.ext4 "$rootp"
 	mount "$rootp" /mnt
