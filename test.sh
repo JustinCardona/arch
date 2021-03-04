@@ -14,7 +14,7 @@ do
 done
 
 boot_state=`ls /sys/firmware | grep -c "efi"`
-cpu_state=`cat /proc/cpuinfo | grep -c "intel"`
+cpu_state=`cat /proc/cpuinfo | grep -c "Intel"`
 gpu_state=`lspci -vnn | grep -c "NVIDIA"`
 
 # Disk Preparation
