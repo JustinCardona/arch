@@ -101,7 +101,7 @@ chroot_func()
 }
 export -f chroot_func
 chroot /mnt /bin/bash -c "chroot_func"
-umount -a
+#umount -a
 #reboot
 
 
