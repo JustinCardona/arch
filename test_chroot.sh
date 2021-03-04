@@ -1,5 +1,3 @@
-
-boot_state=0
 # User information
 clear
 read -p "Enter the host name: " host
