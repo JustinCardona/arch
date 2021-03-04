@@ -82,7 +82,12 @@ chroot_func()
 	echo -e "127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t$host.localdomain\t$host"> /etc/hosts
 
 	# Grub configuration
-	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+	if [ $boot_state -gt 0 ]
+	then
+		grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+	else
+		grub-install --target=i386-pc "$rootp"
+	fi
 	grub-mkconfig -o /boot/grub/grub.cfg
 
 	# Enable services
@@ -101,7 +106,7 @@ chroot_func()
 	echo "%wheel ALL=(ALL) ALL" > /etc/sudoers
 }
 export -f chroot_func
-chroot /mnt /bin/bash -c "chroot_func"
+chroot /mnt sh "chroot_func"
 #umount -a
 #reboot
 
