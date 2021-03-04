@@ -61,7 +61,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 # Chroot
 curl -L JustinCardona.github.io/test_chroot.sh > chroot.sh
-sed -i '1irootp="$rootp"' chroot.sh
+echo "rootp=$rootp" | cat - chroot.sh > temp && mv temp chroot.sh
+echo "boot_state=$boot_state" | cat - chroot.sh > temp && mv temp chroot.sh
 mv chroot.sh /mnt
 arch-chroot /mnt sh chroot.sh
 rm /mnt/chroot.sh
