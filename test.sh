@@ -60,7 +60,6 @@ pacstrap /mnt $packages
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Chroot
-#Chroot
 curl -L JustinCardona.github.io/test_chroot.sh > chroot.sh
 sed -i '1irootp="$rootp"' chroot.sh
 mv chroot.sh /mnt
@@ -68,5 +67,3 @@ arch-chroot /mnt sh chroot.sh
 rm /mnt/chroot.sh
 #umount -a
 #reboot
-
-
