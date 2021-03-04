@@ -107,6 +107,8 @@ chroot_func()
 }
 export -f chroot_func
 chroot /mnt sh "chroot_func"
+
+sed -i '1itask goes here' todo.txt
 #umount -a
 #reboot
 
