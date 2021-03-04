@@ -53,6 +53,7 @@ else
 fi
 
 # Install packages
+echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacstrap /mnt $packages
 
 # Generate File system table
