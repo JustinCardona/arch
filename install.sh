@@ -40,7 +40,7 @@ fi
 # CPU and GPU configuration
 if [ $cpu_state -gt 0 ]
 then
-	packages="${packages} intel-ucode"
+	packages="${packages} intel-ucode xf86-video-intel"
 else
 	packages="${packages} amd-ucode"
 fi
