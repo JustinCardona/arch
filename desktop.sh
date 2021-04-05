@@ -6,7 +6,7 @@ cd ..
 rm -rf yay
 
 # Install packages for desktop environment
-yay -S brave flameshot i3-gaps picom polybar rofi gnome terminator
+yay -S brave plasma-meta kde-applications-meta
 
 # Enable Services
 systemctl enable sddm.service
