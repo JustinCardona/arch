@@ -27,8 +27,9 @@ fi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Enable services
-systemctl enable NetworkManager.service
+systemctl enable gdm.service
 systemctl enable iptables.service
+systemctl enable NetworkManager.service
 systemctl enable systemd-timesyncd.service
 
 # User configuration
