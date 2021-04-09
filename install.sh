@@ -1,7 +1,7 @@
 # Preparation
 pacman -Syyy
 timedatectl set-ntp true
-packages="base base-devel git grub linux linux-firmware linux-headers networkmanager sudo vim"
+packages="base base-devel git grub gnome linux linux-firmware linux-headers networkmanager sudo vim"
 
 # User and Device Information
 disks=$(lsblk -p -n -l -o NAME -e 7,11)
