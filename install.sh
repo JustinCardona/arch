@@ -1,7 +1,7 @@
 # Preparation
 pacman -Syyy
 timedatectl set-ntp true
-packages="base base-devel git grub gnome linux linux-firmware linux-headers networkmanager pulseaudio sudo vim xorg"
+packages="base base-devel git grub  linux linux-firmware linux-headers networkmanager sudo vim"
 
 # User and Device Information
 disks=$(lsblk -p -n -l -o NAME -e 7,11)
@@ -42,14 +42,22 @@ if [ $cpu_state -gt 0 ]
 then
 	packages="${packages} intel-ucode xf86-video-intel"
 else
-	packages="${packages} amd-ucode"
+	cpu_state=`cat /proc/cpuinfo | grep -c "AMD"`
+	if [ $cpu_state -gt 0 ]
+	then
+		packages="${packages} amd-ucode"
+	fi
 fi
 
 if [ $gpu_state -gt 0 ]
 then
 	packages="${packages} nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings"
 else
-	packages="${packages} xf86-video-amdgpu mesa lib32-mesa"
+	gpu_state=`lspci -vnn | grep -c "NVIDIA"`
+	if [ $gpu_state -gt 0 ]
+	then
+		packages="${packages} xf86-video-amdgpu mesa lib32-mesa"
+	fi
 fi
 
 # Install packages
