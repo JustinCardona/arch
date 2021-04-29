@@ -74,5 +74,4 @@ echo "boot_state=$boot_state" | cat - chroot.sh > temp && mv temp chroot.sh
 mv chroot.sh /mnt
 arch-chroot /mnt sh chroot.sh
 rm /mnt/chroot.sh
-umount -a
-reboot
+arch-chroot /mnt
