@@ -3,5 +3,5 @@ cd paru
 makepkg -si
 cd ..
 rm -rf paru
-paru -S ufw xorg pulseaudio chromium code jdk discord lutris
+paru -S ufw xorg pulseaudio gnome gnome-tweaks breeze-gtk beautyline chromium vlc jdk discord lutris 
 sudo systemctl enable ufw.service
